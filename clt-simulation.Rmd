@@ -3,10 +3,10 @@ title: "Applying the Central Limit Theorem to Exponential Random Variables"
 author: "Matthew Gast"
 date: "June 2015"
 output:
+  pdf_document: default
   html_document:
     fig_caption: yes
     keep_md: yes
-  pdf_document: default
 ---
 
 # Overview
@@ -99,14 +99,14 @@ grid.arrange(meanHistogram,zoomedMeanHistogram,ncol=2)
 Next, consider the variance of sample means.  The theoretical value
 for the variance of sample means is given by the distribution variance
 divided by the size of the sample.  In the case of the exponential
-distribution, the variance is $$\\lambda$^-2^, and the sample size is
+distribution, the variance is $\\lambda$^-2^, and the sample size is
 `r size`, so the variance will be 1/(size * lambda^2), or `r
 1/(size*lambda^2)`.
 
-The variance is distributed according to the the $\chi^2^
+The variance is distributed according to the the $\chi$^2^
 distribution, which is asymmetric.  To see if the variance lies within
 the confidence interval, we construct the confidence interval in the
-same manner as before, but we use the $\chi^2^ distribution.
+same manner as before, but we use the $\chi$^2^ distribution.
 
 ```{r sample_variance}
 theoVar <- 1/(size*lambda^2)
